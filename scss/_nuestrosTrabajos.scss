@@ -1,0 +1,103 @@
+/* Nuestros Trabajos */
+
+#nuestrosTrabajos {
+    @include vista-flex (flex, column, center, center);
+}
+
+
+.btn {
+    margin-top: $espaciado-m;
+    background-color: $color-principal;
+    color: $color-texto;
+    border: none;
+
+    &:hover {
+        background-color: $color-secundario;
+        color: $color-texto;
+    }
+}
+
+.offcanvas-body {
+    background-color: $color-texto;
+}
+
+#offcanvasTop{
+    height:50%;
+
+    @media (min-width:$celular) {
+        height:140px;
+        }
+}
+
+#filtroCards {
+    @include vista-flex (flex, column, center, center);
+    input {display: none;}
+    .card {
+        display: none;
+        margin: $espaciado-m 0;
+    }
+}
+
+.labelsFiltro
+{
+    @include vista-flex (flex, row, center, center);
+    gap: $espaciado-m;
+    margin: $espaciado-m auto;
+    z-index: -99;
+    width: 300px;
+
+    label {
+    background-color: $color-principal;
+    color: $color-texto;
+    border-radius: $espaciado-s;
+    padding: $espaciado-s;
+    @include enlace;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+        background-color: $color-secundario;
+    }
+    }
+
+    @media (max-width:$celular) {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width:50%;
+    }
+}
+
+.card-img-top img
+{
+    height: 300px;
+}
+
+#cat1:checked ~ .padreCards .cat1,
+#cat2:checked ~ .padreCards .cat2,
+#cat3:checked ~ .padreCards .cat3,
+#cat4:checked ~ .padreCards .cat4
+{
+    display: flex;
+}
+
+
+#todos:checked ~ .padreCards .cat1,
+#todos:checked ~ .padreCards .cat2,
+#todos:checked ~ .padreCards .cat3,
+#todos:checked ~ .padreCards .cat4
+{
+    display: flex;
+}
+
+@media (min-width: $tablet) {
+    .padreCards
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: $espaciado-l;
+    }
+}
+

@@ -1,0 +1,55 @@
+/* Nosotros */
+
+#main__nosotros
+{
+    margin: $espaciado-l;
+    @include vista-flex (flex, column, center, center);
+
+    ol{
+        margin: 0 $espaciado-l;
+    }
+
+    a{
+        color: $color-secundario;
+        font-weight: 600;
+
+        &:hover {
+            background-color:$color-texto;
+        }
+    }
+
+    h2 {
+    @include titulo-section;
+    }
+
+    img{
+        width: 300px;
+        padding: $espaciado-l;
+    }
+
+    @include media ($tablet) 
+        {
+        display: grid;
+        grid-template-areas:
+        "nosotros foto"
+        "que foto"
+        "como como";
+        grid-template-columns: (50% auto);
+        grid-template-rows: (0.3fr 0.3fr 2fr);
+        gap: $espaciado-m;
+        justify-items: center;
+        align-items: start;
+        
+        #nosotros__nosotros {grid-area: nosotros;}
+        #nosotros__foto {grid-area: foto;}
+        #nosotros__que {grid-area: que;}
+        #nosotros__como {grid-area: como;}
+        }
+
+        @include media (1550px) {
+            grid-template-areas:
+        "nosotros foto"
+        "que foto"
+        "como foto";
+        }
+}

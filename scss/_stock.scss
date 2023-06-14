@@ -1,0 +1,43 @@
+/* En Stock */
+
+#enStock
+{
+    margin: 0px $espaciado-l;
+    @include vista-flex (flex, column, center, center);
+
+    h2 {
+        @include titulo-section;
+    }
+}
+
+.stock
+{
+    margin: $espaciado-l 0px;
+}
+
+
+@media (min-width: $tablet) 
+{
+    .padreCardsStock
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: $espaciado-l;
+    }
+}
+
+@media (min-width: $laptop) 
+{
+    .intro
+    {
+        color: $color-secundario;
+        margin-left: $espaciado-l;
+    }
+
+    #enStock h2
+    {
+        text-align: start;
+    }
+}
