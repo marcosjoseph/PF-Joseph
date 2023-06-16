@@ -81,38 +81,65 @@ header {
         }
     }
 
-/* Footer */
+/* Footer & Redes */
 
 footer {
-    @include vista-flex (flex, row, end, end);
-    position: sticky;
-    bottom:0px;
-    margin-top: $espaciado-l;
-    background-color: none;
+    background-color: $color-principal;
     width: 100%;
+    margin-top: $espaciado-xl;
+    display: grid;
+    grid-template-areas: "izq der";
+    grid-template-rows: 150px;
+    grid-template-columns: 80% auto;
 
-    img {
-        width: 30px;
-        align-content: center;        
+    #menu__footer {
+        grid-area: izq;
+        justify-self: start;
+        align-self: center;
+
+        h4 {
+            font-size: $fuente-m;
+            font-weight: 600;
+            color: $color-secundario;
+            margin-left: 30px;
+        }
+
+        li { 
+            padding: $espaciado-xs;
+            font-size: $fuente-s;
+            font-weight: 400;
+            color: $color-secundario;
+
+            a {
+                color: $color-secundario;
+
+                &:hover {color: $color-texto;}
+            }
+        }
     }
+        
+    #redes {
+        grid-area: der;
+        justify-self: end;
+        align-self: center;
 
-    .redes-sociales {
-        list-style: none;
-        @include vista-flex (flex, column, center, center);
-        gap: $espaciado-m;
-        margin-right: $espaciado-m;
-    }
-
-    #whatsapp:hover, #instagram:hover, #subir:hover {
-        transform:scale(1.4);
-    }
-
-    #subir {
-        @include media ($pc) {
-            display: none;
+        .redes-sociales {
+            padding: $espaciado-s;
+            position: fixed;
+            bottom:2.5px;
+            right:10px;
         }
     }
 }
+    
 
+    #whatsapp, #instagram, #subir {
+    width: 30px;
+    margin: $espaciado-s;
 
+    &:hover {transform:scale(1.4);}
+    }
 
+    #subir {
+        @include media ($pc) { display: none;}
+    }

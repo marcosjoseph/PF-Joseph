@@ -88,36 +88,61 @@ header #logoGroot:hover {
   color: #f5ebe0;
 }
 
-/* Footer */
+/* Footer & Redes */
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: end;
-  position: sticky;
-  bottom: 0px;
-  margin-top: 20px;
-  background-color: none;
+  background-color: #d5bdaf;
   width: 100%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-areas: "izq der";
+  grid-template-rows: 150px;
+  grid-template-columns: 80% auto;
 }
-footer img {
+footer #menu__footer {
+  grid-area: izq;
+  justify-self: start;
+  align-self: center;
+}
+footer #menu__footer h4 {
+  font-size: medium;
+  font-weight: 600;
+  color: #76695d;
+  margin-left: 30px;
+}
+footer #menu__footer li {
+  padding: 2.5px;
+  font-size: small;
+  font-weight: 400;
+  color: #76695d;
+}
+footer #menu__footer li a {
+  color: #76695d;
+}
+footer #menu__footer li a:hover {
+  color: #f5ebe0;
+}
+footer #redes {
+  grid-area: der;
+  justify-self: end;
+  align-self: center;
+}
+footer #redes .redes-sociales {
+  padding: 5px;
+  position: fixed;
+  bottom: 2.5px;
+  right: 10px;
+}
+
+#whatsapp, #instagram, #subir {
   width: 30px;
-  align-content: center;
+  margin: 5px;
 }
-footer .redes-sociales {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-right: 10px;
-}
-footer #whatsapp:hover, footer #instagram:hover, footer #subir:hover {
+#whatsapp:hover, #instagram:hover, #subir:hover {
   transform: scale(1.4);
 }
+
 @media screen and (min-width: 1440px) {
-  footer #subir {
+  #subir {
     display: none;
   }
 }
@@ -520,13 +545,20 @@ footer #whatsapp:hover, footer #instagram:hover, footer #subir:hover {
   }
 }
 
-/* Detalle Consulta */
-.input-group-text {
-  width: 111px;
+#datosDeContacto .datos {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  padding: 10px;
+}
+#datosDeContacto .datos label {
+  width: 135px;
 }
 
-.col-md-4 {
-  width: 90%;
+/* Detalle Consulta */
+.datos {
+  width: 300px;
 }
 
 #presupuesta__categoria {
@@ -548,10 +580,17 @@ footer #whatsapp:hover, footer #instagram:hover, footer #subir:hover {
   justify-content: center;
   align-items: center;
 }
+#presupuesta__medidas label {
+  width: 255px;
+}
 @media screen and (min-width: 768px) {
   #presupuesta__medidas {
     flex-direction: row;
     justify-content: center;
+    width: 500px;
+  }
+  #presupuesta__medidas label {
+    width: auto;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -559,18 +598,21 @@ footer #whatsapp:hover, footer #instagram:hover, footer #subir:hover {
     justify-content: start;
   }
 }
-#presupuesta__medidas .form-control {
-  width: 55px;
-}
 
 #largo, #ancho, #alto {
   display: flex;
   flex-direction: row;
 }
+@media screen and (min-width: 768px) {
+  #largo, #ancho, #alto {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 #validationTextarea {
   height: 300px;
-  width: 100%;
+  width: 250px;
 }
 
 #adjuntarArchivo {
@@ -596,15 +638,8 @@ footer #whatsapp:hover, footer #instagram:hover, footer #subir:hover {
   #presupuesta h2 {
     text-align: start;
   }
-  .col-md-4 {
+  .datos {
     width: 500px;
-  }
-  #presupuesta__medidas {
-    flex-direction: row;
-    width: 500px;
-  }
-  #presupuesta__medidas .form-control {
-    width: 55px;
   }
   #validationTextarea {
     width: 500px;

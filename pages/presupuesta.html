@@ -68,40 +68,30 @@
 
                     <h2>Datos de Contacto</h2>
 
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label"></label>
-                        <div class="input-group nombre">
-                        <span class="input-group-text" id="inputGroupPrepend">Nombre</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">                  </div>
+                    <div class="datos">
+                        <label for="form__nombre" class="form-control">Nombre</label>
+                        <input type="text" class="form-control" id="form__nombre">
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label"></label>
-                        <div class="input-group apellido">
-                        <span class="input-group-text" id="inputGroupPrepend">Apellido</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">                  </div>
+                    <div class="datos">
+                        <label for="form__apellido" class="form-control" >Apellido</label>
+                        <input type="text" class="form-control" id="form__apellido">
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label"></label>
-                        <div class="input-group celular">
-                        <span class="input-group-text" id="inputGroupPrepend">Celular</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">                  </div>
+                    <div class="datos">
+                        <label for="form__celular" class="form-control">Celular</label>
+                        <input type="tel" class="form-control" id="form__celular">
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label"></label>
-                        <div class="input-group mail">
-                        <span class="input-group-text" id="inputGroupPrepend">Mail</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">                  </div>
+                    <div class="datos">
+                        <label for="form__mail" class="form-control">Mail</label>
+                        <input type="email" class="form-control" id="form__mail">
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label"></label>
-                        <div class="input-group direccion">
-                        <span class="input-group-text" id="inputGroupPrepend">Dirección</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend">                  </div>
-                    </div>
+                    <div class="datos">
+                        <label for="form__direccion" class="form-control">Direccion</label>
+                        <input type="text" class="form-control" id="form__direccion">
+                    </div>                    
                 </section>
 
                 <section id="detalleConsulta" class="container">
@@ -132,18 +122,18 @@
 
                     <h3>Medidas</h3>
 
-                    <div class="input-group mb-3" id="presupuesta__medidas">
-                        <div id="largo">
-                            <span class="input-group-text">Largo (cm)</span>
-                            <input type="text" class="form-control"  aria-label="Dollar amount (with dot and two decimal places)">
+                    <div id="presupuesta__medidas">
+                        <div class="datos" id="largo">
+                            <label for="medidas__largo" class="form-control">Largo (cm)</label>
+                            <input type="text" class="form-control" id="medidas__largo" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                        <div id="ancho">
-                            <span class="input-group-text">Ancho (cm)</span>
-                            <input type="text" class="form-control"  aria-label="Dollar amount (with dot and two decimal places)">
+                        <div class="datos" id="ancho">
+                            <label for="medidas__ancho" class="form-control">Ancho (cm)</label>
+                            <input type="text" class="form-control" id="medidas__ancho" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                        <div id="alto">
-                            <span class="input-group-text">Alto (cm)</span>
-                            <input type="text" class="form-control"  aria-label="Dollar amount (with dot and two decimal places)">
+                        <div class="datos" id="alto">
+                            <label for="medidas__alto" class="form-control">Alto (cm)</label>
+                            <input type="text" class="form-control" id="medidas__alto" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
                     </div>
 
@@ -167,6 +157,17 @@
         </main>
 
         <footer>
+
+            <div id="menu__footer">
+            <h4>Contactanos</h4>
+            <ul>
+                <li><a href="https://wa.me/541121580900?text=Hola!%20Queria%20hacerte%20una%20consulta!" target="_blank">1121580900</li>
+                <li><a href="mailto:info@groot.com.ar">info@groot.com.ar</a></li>
+                <li>Bella Vista, Buenos Aires, Argentina.</li>
+            </ul>
+            </div> 
+
+            <div id="redes">
             <ul class="redes-sociales">  
                 <li><a id="arriba" href=""><img id="subir" src="../img/flecha-arriba.png" alt="Subir"></a></li>
                 <li> <a href="https://wa.me/541121580900?text=Hola!%20Queria%20hacerte%20una%20consulta!" target="_blank"> <img id="whatsapp" src="../img/whatsapp.png" alt="Escribinos por Whatsapp">
@@ -175,7 +176,9 @@
                 <li><a href="https://www.instagram.com/groot.woodwork/" target="_blank"> <img id="instagram" src="../img/instagram.png" alt="Mira nuestro instagram">
                 </a>
                 </li>
-            </ul>                
+            </ul>
+            </div> 
+
         </footer>
         
         </div>

@@ -29,16 +29,20 @@
     }
 }
 
-/* Detalle Consulta */
+#datosDeContacto {
+    .datos {
+        @include vista-flex (flex, row, start, start);
+        padding: $espaciado-m;
 
-.input-group-text
-{
-    width: 111px;
+    label { width: 135px;}
+    }
 }
 
-.col-md-4
+/* Detalle Consulta */
+
+.datos
 {
-    width: 90%;
+    width: 300px;
 }
 
 #presupuesta__categoria {
@@ -54,28 +58,36 @@
 {   
     @include vista-flex (flex, column, center, center);
 
+    label {width: 255px;}
+
     @include media ($tablet) {
         flex-direction: row;
         justify-content: center;
+        width: 500px;
+
+        label {width: auto;}
     }
 
     @include media ($pc) {
         justify-content: start;
     }
-
-    .form-control {width:55px;}
 }
 
 #largo, #ancho, #alto
 {
     display: flex;
     flex-direction: row;
+
+    @include media ($tablet) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 #validationTextarea
 {
     height: 300px;
-    width: 100%;
+    width: 250px;
 }
 
 #adjuntarArchivo
@@ -96,17 +108,9 @@
         text-align: start;
     }
 
-    .col-md-4
+    .datos
     {
         width: 500px;
-    }
-
-    #presupuesta__medidas
-    {
-        flex-direction: row;
-        width: 500px;
-
-        .form-control {width: 55px;}
     }
 
     #validationTextarea
